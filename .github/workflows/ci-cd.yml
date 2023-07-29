@@ -3,11 +3,11 @@ name: Continuous Integration and Continuous Deployment
 on:
   push:
     branches:
-      - main # Измените на ветку, которую вы хотите отслеживать
+      - main
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest # Вы можете изменить на другой образ, если требуется
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -16,7 +16,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14" # Измените на нужную версию Node.js
+          node-version: "14"
+
+      - name: Build Application
+        run: yarn build
 
       - name: Install dependencies
         run: npm install
