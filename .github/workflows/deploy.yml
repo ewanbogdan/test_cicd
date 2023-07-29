@@ -35,5 +35,5 @@ jobs:
           publish_dir: ./build
           github_token: ${{ secrets.GITHUB_TOKEN }}
           user_name: GitHub Actions
-          user_email: actions@users.noreply.github.com
+          user_email: ibogdan@remedypointsolutions.com
 
