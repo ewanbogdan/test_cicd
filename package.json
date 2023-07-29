@@ -1,6 +1,5 @@
 {
   "name": "test_cicd",
-  "homepage": "https://ewanbogdan.github.io/test_cicd",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
