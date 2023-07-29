@@ -24,6 +24,10 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Setup Config
+        run: git config --global user.email "ibogdan@remedypointsolutions.com"
+          git config --global user.name "ewanbogdan"
+
       - name: Predeploy Application
         run: npm run predeploy
 
