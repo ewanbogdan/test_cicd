@@ -1,0 +1,25 @@
+name: Continuous Integration and Continuous Deployment
+
+on:
+  push:
+    branches:
+      - main # Измените на ветку, которую вы хотите отслеживать
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Вы можете изменить на другой образ, если требуется
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14" # Измените на нужную версию Node.js
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
