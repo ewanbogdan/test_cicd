@@ -1,4 +1,4 @@
-name: Continuous Integration and Continuous Deployment
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,34 +6,30 @@ on:
       - main
 
 jobs:
-  build-and-test:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          node-version: "16"
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version: "14.x"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build the app
-        run: npm run build
-
       - name: Run tests
         run: npm test
 
-    - name: Deploy to GitHub Pages
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./build
           github_token: ${{ secrets.GITHUB_TOKEN }}
           user_name: ewanbogdan
           user_email: ibogdan@remedypointsolutions.com
-
