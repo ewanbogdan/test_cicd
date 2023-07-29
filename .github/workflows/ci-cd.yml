@@ -25,7 +25,7 @@ jobs:
         run: npm test
 
       - name: Predeploy Application
-        run: npm build
+        run: npm run predeploy
 
       - name: Deploy to Github Pages
-        run: npm deploy
+        run: npm rub deploy
