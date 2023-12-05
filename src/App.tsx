@@ -1,12 +1,11 @@
-import { About } from "About";
-import { Main } from "Main";
 import { Link, Route, Routes } from "react-router-dom";
+import { Main, About } from "components";
 
 export const App = () => {
   return (
-    <>
+    <div className="background">
       <nav>
-        <ul>
+        <ul className="navbar">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -19,6 +18,6 @@ export const App = () => {
         <Route path="/" Component={Main} />
         <Route path="/about" Component={About} />
       </Routes>
-    </>
+    </div>
   );
 };
