@@ -20,6 +20,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "docker-build": "docker build -t test_cicd .",
+    "docker-run": "docker run --rm -p 3000:3000 -v $(pwd):/app test_cicd",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
