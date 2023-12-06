@@ -1,15 +1,15 @@
-# test_cicd
+# TEST_CICD
 
-# URL: https://ewanbogdan.github.io/test_cicd/
+## URL: https://ewanbogdan.github.io/test_cicd/
 
-# Run the following command to build the Docker image:
+Run the following command to build the Docker image:
 
-# npm run docker-build
+### `npm run docker-build`
 
-# This command will create a Docker image named my-react-app.
+This command will create a Docker image.
 
-# Once the image is built, start the Docker container with the following command:
+Once the image is built, start the Docker container with the following command:
 
-# npm run docker-run
+### `npm run docker-run`
 
-# Your React app should now be running in a Docker container, accessible at http://localhost:3000 in your web browser.
+Your React app should now be running in a Docker container, accessible at http://localhost:3000 in your web browser.
